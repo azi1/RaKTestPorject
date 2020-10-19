@@ -14,9 +14,9 @@ const ScreenshotScreen = () => {
     const {EnableScreenShot, DisableScreenShot} = NativeModules.ScreenShotToggleModule;
     try {
       if(status) {
-       await EnableScreenShot();
-      } else { 
        await DisableScreenShot();
+      } else { 
+       await EnableScreenShot();
       } 
 
       console.log(isAcitvated, "isAcitvated");
