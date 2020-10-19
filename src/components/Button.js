@@ -18,7 +18,10 @@ const Button = ({onPressButton, loading, activate}) => {
   } = buttonStyle;
 
   return loading ? (
-    <Pressable style={loadingPressable} onPress={onPressButton}>
+    <Pressable 
+    disabled={loading}
+    style={loadingPressable} 
+    onPress={onPressButton}>
       <View style={containerStyle}>
         <ActivityIndicator size="small" color="#fff" />
         <Text style={textStyle}> Loading </Text>
@@ -50,17 +53,17 @@ const buttonStyle = StyleSheet.create({
   loadingPressable: {
     backgroundColor: 'blue',
     borderRadius: 20,
-    width: 100,
+    width: 110,
   },
   activatePressable: {
     backgroundColor: 'green',
     borderRadius: 20,
-    width: 100,
+    width: 110,
   },
   deactivatePressable: {
     backgroundColor: 'blue',
     borderRadius: 20,
-    width: 100,
+    width: 110,
   },
   textStyle: {
     color: '#FFF',
